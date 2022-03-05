@@ -10,7 +10,7 @@ def resolve_image_path(suffix = ''):
     "export", (str(project_path.stem) + suffix + '.png')
   )
 
-def prepare_view():
+def focus_view():
   Gui.SendMsgToActiveView("ViewFit")
   Gui.runCommand("Std_ViewZoomOut", 0)
 
@@ -38,14 +38,14 @@ def flip_cam():
 
 
 set_isometric_view()
-prepare_view()
+focus_view()
 capture_image(resolve_image_path('-isometric-front'))
 
 flip_cam()
-prepare_view()
+focus_view()
 capture_image(resolve_image_path('-isometric-back'))
 
 set_isometric_view()
-prepare_view()
+focus_view()
 
 save_project()
