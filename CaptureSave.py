@@ -10,12 +10,16 @@ def resolve_image_path(suffix = ''):
     "export", (str(project_path.stem) + suffix + '.png')
   )
 
-def prepare_view(view):
-  view.viewIsometric()
+def prepare_view():
   Gui.SendMsgToActiveView("ViewFit")
   Gui.runCommand("Std_ViewZoomOut", 0)
 
-def capture_image(view, path):
+def set_isometric_view():
+  view = Gui.activeDocument().activeView()
+  view.viewIsometric()
+
+def capture_image(path):
+  view = Gui.activeDocument().activeView()
   view.saveImage(
      str(path), 1562, 958, "Current"
   )
@@ -23,11 +27,25 @@ def capture_image(view, path):
 def save_project():
   Gui.SendMsgToActiveView("Save")
 
+def flip_cam():
+  view = Gui.activeDocument().activeView()
+  cam = view.getCameraNode()
+  cam_orientation_tuple = cam.orientation.getValue().getValue()
+  cam_orientation_flipped_tuple = (
+    cam_orientation_tuple[1], cam_orientation_tuple[0] * -1, cam_orientation_tuple[3] * -1, cam_orientation_tuple[2]
+  )
+  cam.orientation.setValue(cam_orientation_flipped_tuple)
 
-active_view = Gui.activeDocument().activeView()
-image_path = resolve_image_path()
 
-prepare_view(active_view)
-capture_image(active_view, image_path)
+set_isometric_view()
+prepare_view()
+capture_image(resolve_image_path('-isometric-front'))
+
+flip_cam()
+prepare_view()
+capture_image(resolve_image_path('-isometric-back'))
+
+set_isometric_view()
+prepare_view()
 
 save_project()
