@@ -1,10 +1,15 @@
-# freecad-macros
+# freecad macros
 
-> day to day macros for freecad
+> some macros for freecad
 
----
 
-TODO
+### setup
+                      
+- clone this reopsitory, and keep it somewhere on your drive.
+- run the [install][1] script.  
+  if you user macros directory is different than the default, pass it as the first argument.
 
-- [ ] add a bash script that `install`s macros to `~/Library/Preferences/FreeCAD/Macro/`, while altering their extension from `.py` to `.FCMacro`. or maybe just soft-link it.
 
+
+
+[1]: /bin/install.sh
