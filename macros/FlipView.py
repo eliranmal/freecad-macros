@@ -7,7 +7,7 @@ def focus_view():
   Gui.SendMsgToActiveView("ViewFit")
   Gui.runCommand("Std_ViewZoomOut", 0)
 
-def flip_cam():
+def flip_view():
   view = Gui.activeDocument().activeView()
   cam = view.getCameraNode()
   cam_orientation_tuple = cam.orientation.getValue().getValue()
@@ -16,6 +16,9 @@ def flip_cam():
   )
   cam.orientation.setValue(cam_orientation_flipped_tuple)
 
+def main():
+  flip_view()
+  focus_view()
 
-flip_cam()
-focus_view()
+
+main()

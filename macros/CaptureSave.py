@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from pathlib import Path
 import FreeCAD
+from pathlib import Path
 
 
 def resolve_image_path(suffix = ''):
@@ -27,7 +27,7 @@ def capture_image(path):
 def save_project():
   Gui.SendMsgToActiveView("Save")
 
-def flip_cam():
+def flip_view():
   view = Gui.activeDocument().activeView()
   cam = view.getCameraNode()
   cam_orientation_tuple = cam.orientation.getValue().getValue()
@@ -36,16 +36,19 @@ def flip_cam():
   )
   cam.orientation.setValue(cam_orientation_flipped_tuple)
 
+def main():
+  set_isometric_view()
+  focus_view()
+  capture_image(resolve_image_path('-isometric-front'))
 
-set_isometric_view()
-focus_view()
-capture_image(resolve_image_path('-isometric-front'))
+  flip_view()
+  focus_view()
+  capture_image(resolve_image_path('-isometric-back'))
 
-flip_cam()
-focus_view()
-capture_image(resolve_image_path('-isometric-back'))
+  set_isometric_view()
+  focus_view()
 
-set_isometric_view()
-focus_view()
+  save_project()
 
-save_project()
+
+main()
