@@ -46,11 +46,12 @@ link_macros() {
 }
 
 resolve_user_macros_dir() {
-	if [[ "$OSTYPE" == "darwin"* ]]; then
+	if [[ "$OSTYPE" == "linux-gnu" ]]; then
+		# linux
+		echo ~/.FreeCAD/Macro
+	elif [[ "$OSTYPE" == "darwin"* ]]; then
 		# Mac OSX
 		echo ~/Library/Preferences/FreeCAD/Macro
-#	elif [[ "$OSTYPE" == "linux-gnu" ]]; then
-#		# ...
 #	elif [[ "$OSTYPE" == "cygwin" ]]; then
 #		# POSIX compatibility layer and Linux environment emulation for Windows
 #	elif [[ "$OSTYPE" == "msys" ]]; then
