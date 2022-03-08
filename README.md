@@ -7,7 +7,7 @@
                       
 - clone this reopsitory, and keep it somewhere on your drive.
 - run the [install][1] script.  
-  if you user macros directory is different than the default, pass it as the first argument.
+  if your user macros directory is different than the default, pass it as the first argument.
 
 
 
