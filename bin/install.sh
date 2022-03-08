@@ -7,23 +7,23 @@ main() {
 	# shellcheck disable=SC2164,SC2128
 	root_dir="$( cd "$(dirname "${BASH_SOURCE}")/.." ; pwd -P )"
 
-  prepare_env "$@"
+	prepare_env "$@"
 	link_macros "$root_dir"
 }
 
 prepare_env() {
 	USER_MACROS_DIR="$1"
 
-  log
+	log
 	log "validating user macros directory input..."
 	if [ ! -d "$USER_MACROS_DIR" ]; then
 		log "input is not a directory."
-    log
+		log
 		log "resolving default user macros directory..."
 		USER_MACROS_DIR=$(resolve_user_macros_dir)
 		if (( $? == 1 )); then
-      log "resolution failed ($USER_MACROS_DIR). aborting"
-      exit 1
+			log "resolution failed ($USER_MACROS_DIR). aborting"
+			exit 1
 		fi
 	fi
 	log "user macros directory set to $USER_MACROS_DIR"
@@ -34,7 +34,7 @@ link_macros() {
 	local file_name
 	local user_macro_path
 
-  log
+	log
 	log "linking *.py files from the repository to *.FCMacro targets in the default user macros directory..."
 	for file_path in "$root_dir"/macros/*.py; do
 		file_name="$(basename "$file_path")"
@@ -61,13 +61,13 @@ resolve_user_macros_dir() {
 #		# ...
 	else
 		# Unknown.
-    echo "error: $OSTYPE is not supported"
+		echo "error: $OSTYPE is not supported"
 		return 1
 	fi
 }
 
 log() {
-  printf '%s\n' "$@"
+	printf '%s\n' "$@"
 }
 
 
