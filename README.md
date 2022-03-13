@@ -1,6 +1,6 @@
 # freecad macros
 
-> some macros for freecad
+> some macros for freecad 💻 📐 🤖
 
 
 ### setup
