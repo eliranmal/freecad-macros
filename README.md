@@ -17,7 +17,7 @@
 
 <dl>
   <dt>CaptureSave</dt>
-  <dd>captures two images: an isometric view, and a flipped isometric view (front to back) and saves them to the project's `/export` directory, then saves the project.</dd>
+  <dd>captures two images: an isometric view and a flipped isometric view (front to back), saves them to the project's `/export` directory, then saves the project.</dd>
   <dt>FlipView</dt>
   <dd>flips the view (camera) front to back.</dd>
  </dl>
