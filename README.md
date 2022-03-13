@@ -5,7 +5,7 @@
 💻 📐 🤖
 
 
-### setup
+## setup
                       
 - clone this reopsitory, and keep it somewhere on your drive.
 - run the [install][1] script.  
@@ -13,7 +13,7 @@
 - bob is you uncle.
 
 
-### macro list
+## macro list
 
 <dl>
   <dt>CaptureSave</dt>
