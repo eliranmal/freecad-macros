@@ -5,10 +5,9 @@
 
 ## setup
                       
-- clone this reopsitory, and keep it somewhere on your drive.
-- run the [install][1] script.  
-  if you have a custom user macros directory, pass it as the first argument.
-- bob is you uncle.
+- download or clone this reopsitory, and keep it somewhere accessible on your drive
+- run the [install][1] script. if you have a custom user macros directory, pass it as the first argument
+- bob is you uncle
 
 
 ## macro list
