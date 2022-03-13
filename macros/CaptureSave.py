@@ -39,11 +39,11 @@ def flip_view():
 def main():
   set_isometric_view()
   focus_view()
-  capture_image(resolve_image_path('-isometric-front'))
+  capture_image(resolve_image_path('-isometric'))
 
   flip_view()
   focus_view()
-  capture_image(resolve_image_path('-isometric-back'))
+  capture_image(resolve_image_path('-isometric-flipped'))
 
   set_isometric_view()
   focus_view()
