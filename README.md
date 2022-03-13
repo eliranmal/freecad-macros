@@ -1,6 +1,4 @@
-# freecad macros
-
-<sup>_some much needed macros for freecad_</sup>
+# freecad macros &nbsp; <sub><sub><sup><sup>_some much needed macros for freecad_</sup></sup></sub></sub>
 
 💻 📐 🤖
 
