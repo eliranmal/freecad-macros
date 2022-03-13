@@ -1,6 +1,8 @@
 # freecad macros
 
-> some macros for freecad &nbsp;&nbsp;&nbsp; 💻 📐 🤖
+<sup>_some much needed macros for freecad_</sup>
+
+💻 📐 🤖
 
 
 ### setup
@@ -10,6 +12,15 @@
   if you have a custom user macros directory, pass it as the first argument.
 - bob is you uncle.
 
+
+### macro list
+
+<dl>
+  <dt>CaptureSave</dt>
+  <dd>captures two images: an isometric view, and a flipped isometric view (front to back) and saves them to the project's `/export` directory, then saves the project.</dd>
+  <dt>FlipView</dt>
+  <dd>flips the view (camera) front to back.</dd>
+ </dl>
 
 
 
