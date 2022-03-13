@@ -7,7 +7,7 @@
        alt="FreeCAD forums browsed: 281,894" />
 </p>
 
-# freecad macros &nbsp; <sub><sub><sup><sup>_some much needed macros for freecad_</sup></sup></sub></sub>
+# FreeCAD macros &nbsp; <sub><sub><sup><sup>_some much needed macros for FreeCAD_</sup></sup></sub></sub>
 
 💻 📐 🤖
 
