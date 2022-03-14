@@ -3,8 +3,8 @@
        alt="tested on: my box alone" />
   <img src="https://img.shields.io/badge/FreeCAD%20forums%20browsed-281,894-2057a9"
        alt="FreeCAD forums browsed: 281,894" />
-  <img src="https://img.shields.io/badge/bob%20is%20your-uncle-lightskyblue"
-       alt="bob is your: uncle" />
+  <img src="https://img.shields.io/badge/who's%20your%20uncle-bob-lightskyblue"
+       alt="who's your uncle: bob" />
 </p>
 
 # FreeCAD macros &nbsp; <sub><sub><sup><sup>_some much needed macros for FreeCAD_</sup></sup></sub></sub>
