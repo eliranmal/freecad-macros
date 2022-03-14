@@ -1,10 +1,10 @@
 <p align="right">
   <img src="https://img.shields.io/badge/tested%20on-my%20box%20alone-lightseagreen"
        alt="tested on: my box alone" />
-  <img src="https://img.shields.io/badge/projects%20used-maybe%202-lightskyblue"
-       alt="projects used: maybe 2" />
   <img src="https://img.shields.io/badge/FreeCAD%20forums%20browsed-281,894-2057a9"
        alt="FreeCAD forums browsed: 281,894" />
+  <img src="https://img.shields.io/badge/bob%20is%20your-uncle-lightskyblue"
+       alt="bob is your: uncle" />
 </p>
 
 # FreeCAD macros &nbsp; <sub><sub><sup><sup>_some much needed macros for FreeCAD_</sup></sup></sub></sub>
