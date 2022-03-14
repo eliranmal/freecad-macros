@@ -4,8 +4,8 @@ import FreeCAD
 
 
 def focus_view():
-  Gui.SendMsgToActiveView("ViewFit")
-  Gui.runCommand("Std_ViewZoomOut", 0)
+  Gui.SendMsgToActiveView('ViewFit')
+  Gui.runCommand('Std_ViewZoomOut', 0)
 
 def flip_view():
   view = Gui.activeDocument().activeView()

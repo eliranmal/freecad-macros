@@ -7,25 +7,19 @@ from pathlib import Path
 def resolve_image_path(suffix = ''):
   project_path = Path(App.ActiveDocument.FileName)
   return project_path.parent.joinpath(
-    "export", (str(project_path.stem) + suffix + '.png')
+    'export', (str(project_path.stem) + suffix + '.png')
   )
 
+def prepare_view():
+  Gui.Selection.clearSelection()
+
 def focus_view():
-  Gui.SendMsgToActiveView("ViewFit")
-  Gui.runCommand("Std_ViewZoomOut", 0)
+  Gui.SendMsgToActiveView('ViewFit')
+  Gui.runCommand('Std_ViewZoomOut', 0)
 
 def set_isometric_view():
   view = Gui.activeDocument().activeView()
   view.viewIsometric()
-
-def capture_image(path):
-  view = Gui.activeDocument().activeView()
-  view.saveImage(
-     str(path), 1562, 958, "Current"
-  )
-
-def save_project():
-  Gui.SendMsgToActiveView("Save")
 
 def flip_view():
   view = Gui.activeDocument().activeView()
@@ -36,7 +30,18 @@ def flip_view():
   )
   cam.orientation.setValue(cam_orientation_flipped_tuple)
 
+def capture_image(path):
+  view = Gui.activeDocument().activeView()
+  view.saveImage(
+     str(path), 1562, 958, 'Current'
+  )
+
+def save_project():
+  Gui.SendMsgToActiveView('Save')
+
 def main():
+  prepare_view()
+
   set_isometric_view()
   focus_view()
   capture_image(resolve_image_path('-isometric'))
