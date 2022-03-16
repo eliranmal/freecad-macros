@@ -23,7 +23,7 @@
 
 <dl>
   <dt><a href="/macros/CaptureSave.py">CaptureSave</a></dt>
-  <dd>captures two images: an isometric view and a flipped isometric view (front to back), saves them to the project's <code>/export</code> directory, and then saves the project.</dd>
+  <dd>captures multiple images (isometric, isometric-flipped, top, right, front and back views), saves them to the project's <code>/export</code> directory, and then saves the project.</dd>
   <dt><a href="/macros/FlipView.py">FlipView</a></dt>
   <dd>flips the view (camera) front to back.</dd>
  </dl>
