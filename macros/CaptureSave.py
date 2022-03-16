@@ -10,9 +10,6 @@ def resolve_image_path(suffix = ''):
     'export', (str(project_path.stem) + suffix + '.png')
   )
 
-def prepare_view():
-  Gui.Selection.clearSelection()
-
 def focus_view():
   Gui.SendMsgToActiveView('ViewFit')
   Gui.runCommand('Std_ViewZoomOut', 0)
@@ -20,6 +17,22 @@ def focus_view():
 def set_isometric_view():
   view = Gui.activeDocument().activeView()
   view.viewIsometric()
+
+def set_top_view():
+  view = Gui.activeDocument().activeView()
+  view.viewTop()
+
+def set_right_view():
+  view = Gui.activeDocument().activeView()
+  view.viewRight()
+
+def set_front_view():
+  view = Gui.activeDocument().activeView()
+  view.viewFront()
+
+def set_back_view():
+  view = Gui.activeDocument().activeView()
+  view.viewRear()
 
 def flip_view():
   view = Gui.activeDocument().activeView()
@@ -36,12 +49,7 @@ def capture_image(path):
      str(path), 1562, 958, 'Current'
   )
 
-def save_project():
-  Gui.SendMsgToActiveView('Save')
-
-def main():
-  prepare_view()
-
+def capture_images():
   set_isometric_view()
   focus_view()
   capture_image(resolve_image_path('-isometric'))
@@ -50,9 +58,32 @@ def main():
   focus_view()
   capture_image(resolve_image_path('-isometric-flipped'))
 
+  set_top_view()
+  capture_image(resolve_image_path('-top'))
+
+  set_right_view()
+  capture_image(resolve_image_path('-right'))
+
+  set_front_view()
+  capture_image(resolve_image_path('-front'))
+
+  set_back_view()
+  capture_image(resolve_image_path('-back'))
+
+def bootstrap_scene():
+  Gui.Selection.clearSelection()
+
+def teardown_scene():
   set_isometric_view()
   focus_view()
 
+def save_project():
+  Gui.SendMsgToActiveView('Save')
+
+def main():
+  bootstrap_scene()
+  capture_images()
+  teardown_scene()
   save_project()
 
 
