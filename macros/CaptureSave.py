@@ -12,7 +12,6 @@ def resolve_image_path(suffix = ''):
 
 def focus_view():
   Gui.SendMsgToActiveView('ViewFit')
-  Gui.runCommand('Std_ViewZoomOut', 0)
 
 def set_isometric_view():
   view = Gui.activeDocument().activeView()
