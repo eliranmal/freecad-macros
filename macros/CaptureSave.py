@@ -17,21 +17,29 @@ def set_isometric_view():
   view = Gui.activeDocument().activeView()
   view.viewIsometric()
 
-def set_top_view():
+def set_front_view():
   view = Gui.activeDocument().activeView()
-  view.viewTop()
+  view.viewFront()
+
+def set_rear_view():
+  view = Gui.activeDocument().activeView()
+  view.viewRear()
+
+def set_left_view():
+  view = Gui.activeDocument().activeView()
+  view.viewLeft()
 
 def set_right_view():
   view = Gui.activeDocument().activeView()
   view.viewRight()
 
-def set_front_view():
+def set_top_view():
   view = Gui.activeDocument().activeView()
-  view.viewFront()
+  view.viewTop()
 
-def set_back_view():
+def set_bottom_view():
   view = Gui.activeDocument().activeView()
-  view.viewRear()
+  view.viewBottom()
 
 def flip_view():
   view = Gui.activeDocument().activeView()
@@ -57,17 +65,23 @@ def capture_images():
   focus_view()
   capture_image(resolve_image_path('-isometric-flipped'))
 
-  set_top_view()
-  capture_image(resolve_image_path('-top'))
+  set_front_view()
+  capture_image(resolve_image_path('-front'))
+
+  set_rear_view()
+  capture_image(resolve_image_path('-rear'))
+
+  set_left_view()
+  capture_image(resolve_image_path('-left'))
 
   set_right_view()
   capture_image(resolve_image_path('-right'))
 
-  set_front_view()
-  capture_image(resolve_image_path('-front'))
+  set_top_view()
+  capture_image(resolve_image_path('-top'))
 
-  set_back_view()
-  capture_image(resolve_image_path('-back'))
+  set_bottom_view()
+  capture_image(resolve_image_path('-bottom'))
 
 def bootstrap_scene():
   Gui.Selection.clearSelection()
