@@ -50,6 +50,24 @@ def flip_view():
   )
   cam.orientation.setValue(cam_orientation_flipped_tuple)
 
+def rotate_view_clockwise():
+  view = Gui.activeDocument().activeView()
+  cam = view.getCameraNode()
+  cam_orientation_tuple = cam.orientation.getValue().getValue()
+  cam_orientation_rotated_clockwise_tuple = (
+    cam_orientation_tuple[1], cam_orientation_tuple[0], cam_orientation_tuple[3], cam_orientation_tuple[2]
+  )
+  cam.orientation.setValue(cam_orientation_rotated_clockwise_tuple)
+
+def rotate_view_counterclockwise():
+  view = Gui.activeDocument().activeView()
+  cam = view.getCameraNode()
+  cam_orientation_tuple = cam.orientation.getValue().getValue()
+  cam_orientation_rotated_counterclockwise_tuple = (
+    cam_orientation_tuple[0], cam_orientation_tuple[1] * -1, cam_orientation_tuple[2] * -1, cam_orientation_tuple[3]
+  )
+  cam.orientation.setValue(cam_orientation_rotated_counterclockwise_tuple)
+
 def capture_image(path):
   view = Gui.activeDocument().activeView()
   view.saveImage(
@@ -64,6 +82,16 @@ def capture_images():
   flip_view()
   focus_view()
   capture_image(resolve_image_path('-isometric-flipped'))
+
+  set_isometric_view()
+  rotate_view_clockwise()
+  focus_view()
+  capture_image(resolve_image_path('-isometric-rotated-clockwise'))
+
+  set_isometric_view()
+  rotate_view_counterclockwise()
+  focus_view()
+  capture_image(resolve_image_path('-isometric-rotated-counterclockwise'))
 
   set_front_view()
   capture_image(resolve_image_path('-front'))
