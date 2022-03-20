@@ -3,6 +3,9 @@
 import FreeCAD
 
 
+def focus_view():
+  Gui.SendMsgToActiveView('ViewFit')
+
 def rotate_view_counterclockwise():
   view = Gui.activeDocument().activeView()
   cam = view.getCameraNode()

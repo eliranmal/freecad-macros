@@ -25,11 +25,11 @@
   <dt><a href="/macros/CaptureSave.py">CaptureSave</a></dt>
   <dd>captures multiple images of various points of view, saves them to the project's <code>/export</code> directory, and then saves the project.</dd>
   <dt><a href="/macros/FlipView.py">FlipView</a></dt>
-  <dd>flips the view front to back, while maintaining camera elevation.</dd>
+  <dd>flips the view front to back, while maintaining camera elevation, and focuses the view to fit.</dd>
   <dt><a href="/macros/RotateViewClockwise.py">RotateViewClockwise</a></dt>
-  <dd>rotates the view clockwise, while maintaining camera elevation.</dd>
+  <dd>similar to FlipView, but rotates the view clockwise.</dd>
   <dt><a href="/macros/RotateViewCounterclockwise.py">RotateViewCounterclockwise</a></dt>
-  <dd>rotates the view counterclockwise, while maintaining camera elevation.</dd>
+  <dd>similar to FlipView, but rotates the view counterclockwise.</dd>
  </dl>
 
 
