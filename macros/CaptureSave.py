@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
+import json
 import FreeCAD
 from pathlib import Path
+from json.decoder import JSONDecodeError
 
 
 def resolve_image_path(suffix = ''):
@@ -10,8 +12,25 @@ def resolve_image_path(suffix = ''):
     'export', (str(project_path.stem) + suffix + '.png')
   )
 
-# returns all document objects as a dictionary of lists, grouped by type.
+def load_json_as_dict(json_obj):
+  try:
+    input_dict = json.loads(json_obj)
+  except JSONDecodeError:
+    input_dict = dict()
+  return input_dict
+
+def load_macro_options():
+  default_options = {
+    'view': 'current',
+    'reset_visibility': False,
+  }
+  user_options = load_json_as_dict(FreeCAD.ActiveDocument.Comment)
+  return {**default_options, **user_options}
+
 def get_objects_as_dict():
+  """
+  returns all document objects as a dictionary of lists, grouped by type.
+  """
   obj_dict = dict()
   for obj in FreeCAD.ActiveDocument.Objects:
     # this extracts the term between the single quotes in the object type string
@@ -168,22 +187,7 @@ def capture_image_all():
   capture_image_bottom()
 
 def capture_images():
-  view_command_map[view]()
-
-def bootstrap_scene():
-  Gui.Selection.clearSelection()
-  reset_objects_visibility()
-
-def teardown_scene():
-  set_isometric_view()
-  focus_view()
-
-def save_project():
-  Gui.SendMsgToActiveView('Save')
-
-def prepare_env():
-  global view, view_command_map
-  view = 'current'
+  view_command_key = macro_options.get('view')
   view_command_map = {
     'left': capture_image_left,
     'right': capture_image_right,
@@ -198,12 +202,25 @@ def prepare_env():
     'all': capture_image_all,
     'current': capture_image_current,
   }
-  comment = FreeCAD.ActiveDocument.Comment
+  if view_command_key and view_command_key in view_command_map:
+    view_command_map[view_command_key]()
 
-  if comment and comment in view_command_map:
-    view = comment
+def bootstrap_scene():
+  Gui.Selection.clearSelection()
+  if macro_options.get('reset_visibility'):
+    reset_objects_visibility()
 
-  FreeCAD.ActiveDocument.Comment = ''
+def teardown_scene():
+  if macro_options.get('view') == 'all':
+    set_isometric_view()
+  focus_view()
+
+def save_project():
+  Gui.SendMsgToActiveView('Save')
+
+def prepare_env():
+  global macro_options
+  macro_options = load_macro_options()
 
 def main():
   prepare_env()
