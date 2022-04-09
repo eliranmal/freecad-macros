@@ -33,7 +33,7 @@ captures images of various points of view, saves them to the project's `/export`
 ###### type: *String*<br/>default value: `"current"` 
 
 sets the camera view to the desired position.  
-possible values: `left`, `right`, `top`, `bottom`, `front`, `rear`, `iso`, `iso-flipped`, `iso-cw`, `iso-ccw`, `all`, `current`.
+possible values: `"left"`, `"right"`, `"top"`, `"bottom"`, `"front"`, `"rear"`, `"iso"`, `"iso-flipped"`, `"iso-cw"`, `"iso-ccw"`, `"all"`, `"current"`.
 
 ##### `reset_visibility`
 ###### type: *Boolean*<br/>default value: `false`
