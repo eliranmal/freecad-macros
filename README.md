@@ -26,7 +26,7 @@
   <dd>
     captures multiple images of various points of view, saves them to the project's <code>/export</code> directory, and then saves the project.<br/>
     pass the desired view to capture in the document comment (default is 'current'). possible terms:<br/>
-    `left`, `right`, `top`, `bottom`, `front`, `rear`, `iso`, `iso-flipped`, `iso-cw`, `iso-ccw`, `all`, `current`.    
+    <code>left</code>, <code>right</code>, <code>top</code>, <code>bottom</code>, <code>front</code>, <code>rear</code>, <code>iso</code>, <code>iso-flipped</code>, <code>iso-cw</code>, <code>iso-ccw</code>, <code>all</code>, <code>current</code>.    
   </dd>
   <dt><a href="/macros/FlipView.py">FlipView</a></dt>
   <dd>flips the view front to back, while maintaining camera elevation, and focuses the view to fit.</dd>
