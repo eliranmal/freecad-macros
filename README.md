@@ -30,7 +30,6 @@ captures images of various points of view, saves them to the project's `/export`
 #### options
 
 ##### `view` 
-##### **`view`** 
 ###### type: *String*<br/>default value: `"current"` 
 
 sets the camera view to the desired position (default is `current`).  
