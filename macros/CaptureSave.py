@@ -102,7 +102,7 @@ def rotate_view_counterclockwise():
 def capture_image(path):
   view = Gui.activeDocument().activeView()
   view.saveImage(
-     str(path), 1562, 958, 'Front'
+     str(path), 1562, 958, 'Current'
   )
 
 def capture_image_current():
