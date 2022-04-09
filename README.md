@@ -34,7 +34,7 @@ captures images of various points of view, saves them to the project's `/export`
 sets the camera view to the desired position (default is `current`).  
 possible values: `left`, `right`, `top`, `bottom`, `front`, `rear`, `iso`, `iso-flipped`, `iso-cw`, `iso-ccw`, `all`, `current`.
 
-###### `reset_visibility` *Boolean*  
+###### `reset_visibility` *Boolean* (`false`) 
 
 forces visibility toggles on objects in the scene before the capture (default is `false`). 
 
