@@ -21,21 +21,37 @@
 
 ## macros
 
-<dl>
-  <dt><a href="/macros/CaptureSave.py">CaptureSave</a></dt>
-  <dd>
-    captures images of various points of view, saves them to the project's <code>/export</code> directory, and then saves the project.<br/>
-    pass the desired view in the document comment (default is <code>current</code>). possible values:<br/>
-    <code>left</code>, <code>right</code>, <code>top</code>, <code>bottom</code>, <code>front</code>, <code>rear</code>, <code>iso</code>, <code>iso-flipped</code>, <code>iso-cw</code>, <code>iso-ccw</code>, <code>all</code>, <code>current</code>.    
-  </dd>
-  <dt><a href="/macros/FlipView.py">FlipView</a></dt>
-  <dd>flips the view front to back, while maintaining camera elevation, and focuses the view to fit.</dd>
-  <dt><a href="/macros/RotateViewClockwise.py">RotateViewClockwise</a></dt>
-  <dd>similar to FlipView, but rotates the view clockwise.</dd>
-  <dt><a href="/macros/RotateViewCounterclockwise.py">RotateViewCounterclockwise</a></dt>
-  <dd>similar to FlipView, but rotates the view counterclockwise.</dd>
- </dl>
+macro options can be passed as json via the document comment input field. see each macro's description for supported options.             
+
+### [CaptureSave][2]
+
+captures images of various points of view, saves them to the project's `/export` directory, and then saves the project.  
+
+#### options
+
+- **`view`** *String*: sets the camera view to the desired position (default is `current`).  
+  possible values: `left`, `right`, `top`, `bottom`, `front`, `rear`, `iso`, `iso-flipped`, `iso-cw`, `iso-ccw`, `all`, `current`.
+
+- **`reset_visibility`** *Boolean*: forces visibility toggles on objects in the scene before the capture (default is `false`). 
+
+### [FlipView][3]
+
+flips the view front to back, while maintaining camera elevation, and focuses the view to fit.
+
+### [RotateViewClockwise][4]
+
+similar to FlipView, but rotates the view clockwise.
+
+### [RotateViewCounterclockwise][5]
+
+similar to FlipView, but rotates the view counterclockwise.
+
+
 
 
 
 [1]: /bin/install.sh
+[2]: /macros/CaptureSave.py
+[3]: /macros/FlipView.py
+[4]: /macros/RotateViewClockwise.py
+[5]: /macros/RotateViewCounterclockwise.py
