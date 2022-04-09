@@ -19,11 +19,15 @@
 - bob is you uncle
 
 
-## macro list
+## macros
 
 <dl>
   <dt><a href="/macros/CaptureSave.py">CaptureSave</a></dt>
-  <dd>captures multiple images of various points of view, saves them to the project's <code>/export</code> directory, and then saves the project.</dd>
+  <dd>
+    captures multiple images of various points of view, saves them to the project's <code>/export</code> directory, and then saves the project.<br/>
+    pass the desired view to capture in the document comment (default is 'current'). possible terms:<br/>
+    `left`, `right`, `top`, `bottom`, `front`, `rear`, `iso`, `iso-flipped`, `iso-cw`, `iso-ccw`, `all`, `current`.    
+  </dd>
   <dt><a href="/macros/FlipView.py">FlipView</a></dt>
   <dd>flips the view front to back, while maintaining camera elevation, and focuses the view to fit.</dd>
   <dt><a href="/macros/RotateViewClockwise.py">RotateViewClockwise</a></dt>
