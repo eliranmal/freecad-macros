@@ -21,7 +21,7 @@
 
 ## macros
 
-macro options can be passed as json via the document comment input field. see each macro's description for supported options.             
+as a general note, macro options can be passed as json via the document comment input field. see each macro's description for supported options.             
 
 ### [CaptureSave][2]
 
