@@ -32,12 +32,13 @@ captures images of various points of view, saves them to the project's `/export`
 ##### `view` 
 ###### type: *String*<br/>default value: `"current"` 
 
-sets the camera view to the desired position (default is `current`).  
+sets the camera view to the desired position.  
 possible values: `left`, `right`, `top`, `bottom`, `front`, `rear`, `iso`, `iso-flipped`, `iso-cw`, `iso-ccw`, `all`, `current`.
 
-###### `reset_visibility` *Boolean* (`false`) 
+##### `reset_visibility`
+###### type: *Boolean*<br/>default value: `false`
 
-forces visibility toggles on objects in the scene before the capture (default is `false`). 
+forces visibility toggles on objects in the scene before the capture. 
 
 ### [FlipView][3]
 
