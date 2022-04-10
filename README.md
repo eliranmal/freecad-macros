@@ -25,7 +25,7 @@ as a general note, macro options can be passed as json via the document comment 
 
 ### [CaptureSave][2]
 
-captures images of various points of view, saves them to the project's `/export` directory, and then saves the project.  
+captures images of various points of view, saves them to the project's [export directory][6], and then saves the project.  
 
 #### options
 
@@ -34,6 +34,11 @@ captures images of various points of view, saves them to the project's `/export`
 
 selects the desired camera view to be captured.  
 possible values: `"left"`, `"right"`, `"top"`, `"bottom"`, `"front"`, `"rear"`, `"iso"`, `"iso-flipped"`, `"iso-cw"`, `"iso-ccw"`, `"all"` (which includes all of the above), `"current"`.
+
+##### `export_dir`
+###### type: *String*<br/>default value: `"export"`
+
+sets the directory path for saving captured images, relative to the project directory.
 
 ##### `reset_visibility`
 ###### type: *Boolean*<br/>default value: `false`
@@ -61,3 +66,4 @@ similar to FlipView, but rotates the view counterclockwise.
 [3]: /macros/FlipView.py
 [4]: /macros/RotateViewClockwise.py
 [5]: /macros/RotateViewCounterclockwise.py
+[6]: #export_dir

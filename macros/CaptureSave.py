@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import os
 import json
 import FreeCAD
 from pathlib import Path
@@ -7,10 +8,17 @@ from json.decoder import JSONDecodeError
 
 
 def resolve_image_path(suffix = ''):
-  project_path = Path(App.ActiveDocument.FileName)
-  return project_path.parent.joinpath(
-    'export', (str(project_path.stem) + suffix + '.png')
+  project_file = Path(App.ActiveDocument.FileName)
+  project_dir = project_file.parent
+  export_dir = project_dir.joinpath(
+    macro_options.get('export_dir')
   )
+  image_file_name = str(project_file.stem) + suffix + '.png'
+
+  if not os.path.exists(export_dir):
+    os.makedirs(export_dir)
+
+  return project_dir.joinpath(export_dir, image_file_name)
 
 def load_json_as_dict(json_obj):
   try:
@@ -22,6 +30,7 @@ def load_json_as_dict(json_obj):
 def load_macro_options():
   default_options = {
     'view': 'current',
+    'export_dir': 'export',
     'reset_visibility': False,
   }
   user_options = load_json_as_dict(FreeCAD.ActiveDocument.Comment)
