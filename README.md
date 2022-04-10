@@ -29,10 +29,10 @@ captures images of various points of view, saves them to the project's `/export`
 
 #### options
 
-| `name` *Type* (`default_value`)        | description                                                           | possible values                                                                                                                                                              |
-|----------------------------------------|-----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `view` *String* (`"current"`)          | selects the desired camera view to be captured.                       | `"left"`, `"right"`, `"top"`, `"bottom"`, `"front"`, `"rear"`, `"iso"`, `"iso-flipped"`, `"iso-cw"`, `"iso-ccw"`, `"all"` (which includes all of the above) and `"current"`. |
-| `reset_visibility` *Boolean* (`false`) | forces visibility toggles on objects in the scene before the capture. | `true` or `false`                                                                                                                                                            |
+| `name`&nbsp;*Type*&nbsp;(`default_value`) | description                                                           | possible values                                                                                                                                                              |
+|-------------------------------------------|-----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `view` *String* (`"current"`)             | selects the desired camera view to be captured.                       | `"left"`, `"right"`, `"top"`, `"bottom"`, `"front"`, `"rear"`, `"iso"`, `"iso-flipped"`, `"iso-cw"`, `"iso-ccw"`, `"all"` (which includes all of the above) and `"current"`. |
+| `reset_visibility` *Boolean* (`false`)    | forces visibility toggles on objects in the scene before the capture. | `true` or `false`                                                                                                                                                            |
 
 ### [FlipView][3]
 
