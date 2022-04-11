@@ -29,21 +29,21 @@ captures images of various points of view, saves them to the project's [export d
 
 #### options
 
-- `view`
-  ###### type: *String*<br/>default value: `"current"`
-  
-  selects the desired camera view to be captured.  
-  possible values: `"left"`, `"right"`, `"top"`, `"bottom"`, `"front"`, `"rear"`, `"iso"`, `"iso-flipped"`, `"iso-cw"`, `"iso-ccw"`, `"all"` (which includes all of the above), `"current"`.
+##### `view`
+###### type: *String*<br/>default value: `"current"`
 
-- `export_dir`
-  ###### type: *String*<br/>default value: `"export"`
-  
-  sets the directory path for saving captured images, relative to the project directory.
-  
-- `reset_visibility`
-  ###### type: *Boolean*<br/>default value: `false`
-  
-  forces visibility toggles on objects in the scene before the capture.
+selects the desired camera view to be captured.  
+possible values: `"left"`, `"right"`, `"top"`, `"bottom"`, `"front"`, `"rear"`, `"iso"`, `"iso-flipped"`, `"iso-cw"`, `"iso-ccw"`, `"all"` (which includes all of the above), `"current"`.
+
+##### `export_dir`
+###### type: *String*<br/>default value: `"export"`
+
+sets the directory path for saving captured images, relative to the project directory.
+
+##### `reset_visibility`
+###### type: *Boolean*<br/>default value: `false`
+
+forces visibility toggles on objects in the scene before the capture.
 
 ### [FlipView][3]
 
