@@ -29,7 +29,8 @@ captures images of various points of view, saves them to the project's [export d
 
 #### options
 
-##### `view` <sub>type: *String*, default value: `"current"`</sub>
+##### `view`
+###### type: *String*<br/>default value: `"current"`
 
 selects the desired camera view to be captured.  
 possible values: `"left"`, `"right"`, `"top"`, `"bottom"`, `"front"`, `"rear"`, `"iso"`, `"iso-flipped"`, `"iso-cw"`, `"iso-ccw"`, `"all"` (which includes all of the above), `"current"`.
